@@ -1,15 +1,14 @@
 import React  from 'react';
+// 72 - Add Routes to CommentBox and CommentList
+import {  Route } from 'react-router-dom';
 import CommentBox from 'components/CommentBox';
 import CommentList from 'components/CommentList';
 
-// 13
 export default () => {
-    // 14
-    // Display bare-bones components
     return (
         <div>
-            <CommentBox />
-            <CommentList />
+            <Route path="/post" component={CommentBox} />
+            <Route path= "/" component={CommentList} />
         </div>
     );
 }
