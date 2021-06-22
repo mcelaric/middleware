@@ -17,6 +17,7 @@ export function fetchComments() {
     }
 }
 
+// 73 - auth action creator
 export function changeAuth(isLoggedIn) {
     return {
         type: CHANGE_AUTH,

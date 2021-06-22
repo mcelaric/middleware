@@ -12,6 +12,7 @@ renderComments() {
 render() {
     return (
         <div>
+            {/* 72 - Add the h4 to show component when no comments are in store */}
             <h4>Comment List</h4>
             <ul>
                 {this.renderComments()}
