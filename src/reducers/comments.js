@@ -6,6 +6,8 @@ export default function(state = [], action) {
             return [...state, action.payload];
         
         case FETCH_COMMENTS:
+            // 83 - Look inside action object via debugger
+            //debugger;
             const comments = action.payload.data.map(comment => comment.name);
             return [...state, ...comments];
 
