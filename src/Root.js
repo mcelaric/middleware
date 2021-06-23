@@ -1,8 +1,10 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import { createStore , applyMiddleware} from 'redux';
-import reduxPromise from 'redux-promise';
+//import reduxPromise from 'redux-promise';
 import reducers from 'reducers';
+// 88 - wire up our new middleware
+import async from 'middlewares/async';
 
 export default ({ children, initialState = {} }) => {    
     // 83 - remove reduxPromise, cause race conditions where flow races ahead
@@ -16,7 +18,7 @@ export default ({ children, initialState = {} }) => {
     const store = createStore(
         reducers, 
         initialState, 
-        applyMiddleware(reduxPromise)
+        applyMiddleware(async)
     );
     
     return (
