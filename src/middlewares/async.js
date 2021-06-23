@@ -13,8 +13,6 @@ export default function({ dispatch }) {
 }
 */
 
-import { act } from "react-dom/cjs/react-dom-test-utils.production.min"
-
 // Refactor of boilerplate code commented out above
 // Any time we have an arrow function, if the arrow function contains a single expression
 // like just one line of JavaScript code, then we can optionally remove our curly braces.
